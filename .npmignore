@@ -2,6 +2,7 @@ _mock
 .arc
 .DS_Store
 .eslintignore
+.prettierignore
 .eslintrc.js
 .git/
 .github/
