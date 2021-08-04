@@ -50,7 +50,7 @@ jobs:
         if: github.ref == 'refs/heads/master' && failure() && matrix.node-version == '10.x' && matrix.os == 'ubuntu-latest'
         with:
           type: ${{ job.status }}
-          job_name: "*Build*"
+          job_name: '*Build*'
           url: ${{ secrets.SLACK_WEBHOOK }}
           commit: true
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -116,7 +116,7 @@ jobs:
         if: always()
         with:
           type: ${{ job.status }}
-          job_name: "*Publish*"
+          job_name: '*Publish*'
           url: ${{ secrets.SLACK_WEBHOOK }}
           commit: true
           token: ${{ secrets.GITHUB_TOKEN }}

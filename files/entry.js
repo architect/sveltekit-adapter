@@ -3,17 +3,17 @@
 import url from 'url';
 import { init, render } from '../output/server/app.js'; // eslint-disable-line import/no-unresolved
 import { isContentTypeTextual } from '@sveltejs/kit/adapter-utils'; // eslint-disable-line import/no-unresolved
-import arc from '@architect/functions'
+import arc from '@architect/functions';
 
 init();
 
-const checkStatic = arc.http.proxy({passthru:true})
+const checkStatic = arc.http.proxy({ passthru: true });
 
-export const handler = arc.http.async(checkStatic,svelteHandler)
+export const handler = arc.http.async(checkStatic, svelteHandler);
 
 export async function svelteHandler(event) {
 	const { host, rawPath: path, httpMethod, rawQueryString, headers, body } = event;
-	
+
 	const query = new url.URLSearchParams(rawQueryString);
 	const type = headers['content-type'];
 	const rawBody =
@@ -23,11 +23,10 @@ export async function svelteHandler(event) {
 				: body
 			: new TextEncoder('base64').encode(body);
 
-
 	const rendered = await render({
 		host,
 		method: httpMethod,
-		headers ,
+		headers,
 		path,
 		rawbody,
 		query
@@ -47,5 +46,3 @@ export async function svelteHandler(event) {
 		body: 'Not Found'
 	};
 }
-
-

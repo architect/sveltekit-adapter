@@ -4,11 +4,11 @@
 	"main": "index.mjs",
 	"type": "module",
 	"scripts": {
-		"lint": "eslint --ignore-path .gitignore \"**/*.{ts,js,svelte}\" && npm run check-format",
+		"lint": "eslint --ignore-path .gitignore \"**/*.{ts,js,svelte}\" \"example/\" && npm run check-format",
 		"dev": "rollup -cw",
 		"build": "rollup -c",
-		"format": "prettier --write . --config ../../.prettierrc --ignore-path .gitignore",
-		"check-format": "prettier --check . --config ../../.prettierrc --ignore-path .gitignore",
+		"format": "prettier --write . --ignore-path .gitignore",
+		"check-format": "prettier --check . --ignore-path .gitignore",
 		"prepublishOnly": "npm run build"
 	},
 	"files": [
@@ -36,6 +36,9 @@
 		"require": "./index.cjs"
 	},
 	"eslintConfig": {
-		"extends": "@architect/eslint-config"
+		"extends": "@architect/eslint-config",
+		"parserOptions": {
+			"sourceType": "module"
+		}
 	}
 }
