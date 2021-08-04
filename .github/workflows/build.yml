@@ -39,9 +39,6 @@ jobs:
       - name: Install
         run: npm install
 
-      - name: Install Example
-        run: cd example/hn-sk && npm install
-
       - name: Test
         run: npm test
         env:
