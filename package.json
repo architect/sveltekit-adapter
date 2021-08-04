@@ -26,6 +26,8 @@
 		"@rollup/plugin-node-resolve": "^13.0.2",
 		"@sveltejs/kit": "^1.0.0-next.120",
 		"eslint": "^7.32.0",
+		"eslint-config-prettier": "^8.3.0",
+		"prettier": "^2.3.2",
 		"rollup": "^2.47.0",
 		"tape": "^5.3.0"
 	},
@@ -34,6 +36,6 @@
 		"require": "./index.cjs"
 	},
 	"eslintConfig": {
-    "extends": "@architect/eslint-config"
-  }
+		"extends": "@architect/eslint-config"
+	}
 }
