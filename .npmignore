@@ -1,0 +1,14 @@
+_mock
+.arc
+.DS_Store
+.eslintignore
+.eslintrc.js
+.git/
+.github/
+.nyc_output/
+changelog.md
+.codecov.yaml
+contributing.md
+coverage/
+test/
+example/
