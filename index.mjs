@@ -51,7 +51,7 @@ export default function (options) {
       utils.copy_static_files(static_directory)
       utils.copy_client_files(static_directory)
 
-      writeFilesSync(
+      writeFileSync(
         join('.svelte-kit', 'begin', 'sveltekit-render', 'package.json'),
         '{"module":"commonjs"}'
       )
