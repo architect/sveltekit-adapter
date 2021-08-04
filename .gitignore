@@ -1,5 +1,5 @@
 .DS_Store
 node_modules
 package-lock.json
-#./index.cjs
-#./index.cjs.map
+/index.cjs
+/index.cjs.map
