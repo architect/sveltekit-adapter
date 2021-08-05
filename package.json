@@ -6,11 +6,12 @@
   "scripts": {
     "lint": "eslint --ignore-path .gitignore  && npm run check-format",
     "test": "npm run test:example-integration",
-    "test:example-integration": "cd example/hn-sk && npm run test",
+    "test:example-integration": "(cd example/hn-sk && npm run test)",
     "dev": "rollup -cw",
     "build": "rollup -c",
     "format": "prettier --write . --ignore-path .gitignore ",
     "check-format": "prettier --check . --ignore-path .gitignore ",
+    "postinstall":"(cd example/hn-sk && npm install)",
     "prepublishOnly": "npm run build"
   },
   "files": [
