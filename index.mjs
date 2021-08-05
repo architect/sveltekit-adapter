@@ -21,6 +21,7 @@ export default function (options) {
 
     async adapt({ utils }) {
       const files = fileURLToPath(new URL('./files', import.meta.url))
+
       utils.log.minor('verifying app.arc manifest exists')
       if (!existsSync('app.arc')) {
         utils.log.minor('adding architect manifest app.arc')
