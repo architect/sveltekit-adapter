@@ -39,12 +39,7 @@ jobs:
       - name: Install
         run: npm install
 
-      - name: Install Example
-        working-directory: ./example/hk-sk
-        run: npm install
-
       - name: Test
-        working-directory: ./example/hk-sk
         run: npm test
         env:
           CI: true

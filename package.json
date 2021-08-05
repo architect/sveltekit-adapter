@@ -1,11 +1,13 @@
 {
   "name": "@architect/sveltekit-adapter",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "main": "index.mjs",
   "type": "module",
   "scripts": {
     "lint": "eslint --ignore-path .gitignore  && npm run check-format",
-    "test:example-integration": "(cd example/hn-sk && npm run test)",
+    "test:example-integration": "cd example/hn && npm run test",
+    "test": "npm run test:example-integration",
+    "postinstall":"cd example/hn && npm install",
     "dev": "rollup -cw",
     "build": "rollup -c",
     "format": "prettier --write . --ignore-path .gitignore ",
