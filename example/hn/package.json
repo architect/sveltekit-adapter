@@ -5,8 +5,9 @@
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build --verbose",
+    "sandbox":"sandbox",
     "preview": "svelte-kit preview",
-    "test:integration": "npm run build && npx tape test/alive.test.js",
+    "test:integration": "npm run build && npx tape test/alive-test.cjs",
     "test": "npm run test:integration"
   },
   "devDependencies": {

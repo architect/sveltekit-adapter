@@ -1,7 +1,7 @@
 {
   "name": "@architect/sveltekit-adapter",
-  "version": "0.0.0",
-  "main": "index.mjs",
+  "version": "0.0.1",
+  "main": "index.js",
   "type": "module",
   "scripts": {
     "lint": "eslint --ignore-path .gitignore  && npm run check-format",
@@ -16,7 +16,7 @@
   },
   "files": [
     "files",
-    "index.mjs",
+    "index.js",
     "index.cjs",
     "index.cjs.map"
   ],
@@ -35,7 +35,7 @@
     "tape": "^5.3.0"
   },
   "exports": {
-    "import": "./index.mjs",
+    "import": "./index.js",
     "require": "./index.cjs"
   },
   "eslintConfig": {
