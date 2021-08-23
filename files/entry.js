@@ -2,7 +2,6 @@
 
 import url from 'url'
 import { init, render } from '../output/server/app.js' // eslint-disable-line import/no-unresolved
-import { isContentTypeTextual } from '@sveltejs/kit/adapter-utils' // eslint-disable-line import/no-unresolved
 import arc from '@architect/functions'
 
 init()
@@ -16,12 +15,8 @@ export async function svelteHandler(event) {
 
   const query = new url.URLSearchParams(rawQueryString)
   const type = headers['content-type']
-  const rawBody =
-    type && isContentTypeTextual(type)
-      ? isBase64Encoded
-        ? Buffer.from(body, 'base64').toString()
-        : body
-      : new TextEncoder('base64').encode(body)
+ 	const encoding = isBase64Encoded ? 'base64' : headers['content-encoding'] || 'utf-8';
+	const rawBody = typeof body === 'string' ? Buffer.from(body, encoding) : body;
 
   const rendered = await render({
     host,
