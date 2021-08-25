@@ -27,7 +27,7 @@
     "@architect/eslint-config": "^1.0.1",
     "@rollup/plugin-commonjs": "^19.0.1",
     "@rollup/plugin-node-resolve": "^13.0.2",
-    "@sveltejs/kit": "^1.0.0-next.120",
+    "@sveltejs/kit": "^1.0.0-next.147",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "prettier": "^2.3.2",
