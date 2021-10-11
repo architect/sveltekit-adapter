@@ -5,13 +5,14 @@
   "type": "module",
   "scripts": {
     "lint": "eslint --ignore-path .gitignore  && npm run check-format",
+    "hydrate:example": "cd example/hn && npm install",
     "test:example-integration": "cd example/hn && npm run test",
     "test": "npm run test:example-integration",
-    "postinstall": "cd example/hn && npm install",
     "dev": "rollup -cw",
     "build": "rollup -c",
     "format": "prettier --write . --ignore-path .gitignore ",
     "check-format": "prettier --check . --ignore-path .gitignore ",
+    "rc": "npm version prerelease --preid RC",
     "prepublishOnly": "npm run build"
   },
   "files": [

@@ -41,6 +41,9 @@ jobs:
       - name: Install
         run: npm install
 
+      - name: Install
+        run: npm run hydrate:example
+
       - name: Test
         run: npm test
         env:
