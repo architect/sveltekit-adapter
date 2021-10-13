@@ -15,6 +15,9 @@
     "rc": "npm version prerelease --preid RC",
     "prepublishOnly": "npm run build"
   },
+  "bugs": {
+    "url": "https://github.com/architect/architect/issues"
+   },
   "files": [
     "files",
     "index.js",
@@ -25,7 +28,7 @@
     "@architect/functions": "^3.14.2"
   },
   "devDependencies": {
-    "@architect/eslint-config": "^1.0.1",
+    "@architect/eslint-config": "^2",
     "@rollup/plugin-commonjs": "^19.0.1",
     "@rollup/plugin-node-resolve": "^13.0.2",
     "@sveltejs/kit": "^1.0.0-next.147",

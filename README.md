@@ -18,3 +18,6 @@ export default {
 	}
 };
 ```
+
+## Issues / Bugs
+Please report issues in the [Architect repository](https://github.com/architect/architect/issues).
